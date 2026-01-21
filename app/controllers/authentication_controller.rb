@@ -2,7 +2,7 @@ class AuthenticationController < ApplicationController
 
   skip_before_action :authenticate
 
-  def login
+  def authenticate
     user = User.find_by(username: params[:username])
     authenticated_user = user&.authenticate(params[:password])
 
