@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# Source articles
+## JSON Web Tokens and Rails
+https://blog.appsignal.com/2023/08/23/secure-your-ruby-app-with-json-web-tokens.html
+
+https://dev.to/mohhossain/a-complete-guide-to-rails-authentication-using-jwt-403p
