@@ -1,0 +1,9 @@
+Task: Implement UsersController and Registration Endpoint
+Summary: Implemented the users controller with a create action for registration. Added email to users table and updated User model validation. Added integration tests.
+Changes:
+- Created app/controllers/users_controller.rb
+- Created test/controllers/users_controller_test.rb
+- Updated app/models/user.rb (added validations)
+- Updated db/schema.rb (added email)
+- Created db/migrate/20260206213259_add_email_to_users.rb
+Why: To allow new users to register for the application, enabling the authentication flow.
