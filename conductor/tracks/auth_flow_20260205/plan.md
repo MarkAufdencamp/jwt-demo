@@ -5,9 +5,9 @@
     - [x] Create `app/controllers/users_controller.rb`
     - [x] Implement `create` action with validation
     - [x] Update `config/routes.rb` for user registration
-- [ ] Task: Write Registration Tests
-    - [ ] Create `test/controllers/users_controller_test.rb`
-    - [ ] Verify successful registration and validation failures
+- [x] Task: Write Registration Tests [4bdc348]
+    - [x] Create `test/controllers/users_controller_test.rb`
+    - [x] Verify successful registration and validation failures
 - [ ] Task: Conductor - User Manual Verification 'User Registration' (Protocol in workflow.md)
 
 ## Phase 2: Refine Authentication and Secure Profile
