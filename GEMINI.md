@@ -1,0 +1,65 @@
+# Project Context: JWT Demo
+
+## Project Overview
+This is a Ruby on Rails API application designed to demonstrate JSON Web Token (JWT) authentication. It provides endpoints for user authentication and token generation, utilizing a custom JWT implementation alongside Rails' built-in secure password features.
+
+## Tech Stack
+*   **Framework:** Ruby on Rails 8.0.4
+*   **Language:** Ruby
+*   **Database:** MySQL (`mysql2` gem)
+*   **Authentication:**
+    *   **JWT:** Custom implementation using the `jwt` gem (see `app/lib/json_web_token.rb`).
+    *   **Password Hashing:** `bcrypt` (via `has_secure_password`).
+*   **Deployment:** Docker & Kamal
+*   **Background Jobs/Caching:** Solid Queue, Solid Cache, Solid Cable
+
+## Key Components
+
+### Authentication
+*   **`app/lib/json_web_token.rb`**: A utility class responsible for encoding and decoding JWTs. It uses the Rails `secret_key_base` for signing.
+*   **`app/controllers/authentication_controller.rb`**: Handles the `/authenticate` endpoint. It verifies user credentials and issues a JWT if successful.
+*   **`app/models/user.rb`**: The User model, equipped with `has_secure_password` for safe password storage.
+
+### Routes (`config/routes.rb`)
+*   `POST /authenticate` -> `AuthenticationController#authenticate`: Accepts `username` and `password`, returns a JWT token.
+*   `POST /users` -> `UsersController#create`: Intended for user registration. **Note:** `UsersController` appears to be missing from the current codebase.
+*   `GET /up`: Health check endpoint.
+
+## Development Setup
+
+### Prerequisites
+*   Ruby (see `.ruby-version`)
+*   MySQL Server
+
+### Installation
+1.  **Install Dependencies:**
+    ```bash
+    bundle install
+    ```
+2.  **Database Setup:**
+    ```bash
+    bin/rails db:create
+    bin/rails db:migrate
+    ```
+
+### Running the Application
+Start the Rails server:
+```bash
+bin/rails server
+```
+The server will default to `http://localhost:3000`.
+
+### Testing
+Run the test suite:
+```bash
+bin/rails test
+```
+
+## Docker & Deployment
+The project includes a `Dockerfile` and `.kamal` configuration for containerized deployment.
+*   **Docker:** Used for building the application image.
+*   **Kamal:** Used for deploying the application to servers.
+
+## Conventions
+*   **API-Only:** The application is structured primarily as an API.
+*   **Solid Stack:** Uses the "Solid" family of gems for database-backed caching, queuing, and websockets, reducing the need for external services like Redis in simple setups.
