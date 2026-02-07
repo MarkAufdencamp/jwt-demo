@@ -13,10 +13,10 @@
 ## Phase 2: Refine Authentication and Secure Profile
 - [x] Task: Verify and Refine AuthenticationController [f825dc1]
     - [x] Ensure `POST /authenticate` handles valid and invalid logins correctly
-- [ ] Task: Implement Authenticated Profile Endpoint
-    - [ ] Create a "Profile" controller or action
-    - [ ] Implement token verification middleware/concern
-    - [ ] Verify access control
+- [x] Task: Implement Authenticated Profile Endpoint [e1afd32]
+    - [x] Create a "Profile" controller or action
+    - [x] Implement token verification middleware/concern
+    - [x] Verify access control
 - [ ] Task: Write Authentication and Profile Integration Tests
     - [ ] Test login flow followed by protected resource access
 - [ ] Task: Conductor - User Manual Verification 'Refine Authentication and Secure Profile' (Protocol in workflow.md)
