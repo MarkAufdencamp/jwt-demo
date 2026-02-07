@@ -11,15 +11,15 @@ class ApplicationController < ActionController::API
     token = authorization_header.split(" ").last if authorization_header
     decoded_token = JsonWebToken.decode(token)
 
-    User.find(decoded_token[:user_id])
+    @current_user = User.find(decoded_token[:user_id])
   end
 
   def invalid_token
-    render json: { invalid_token: 'invalid token' }
+    render json: { invalid_token: 'invalid token' }, status: :unauthorized
   end
 
   def decode_error
-    render json: { decode_error: 'decode error' }
+    render json: { decode_error: 'decode error' }, status: :unauthorized
   end
 
 end
