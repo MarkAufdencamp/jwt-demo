@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [~] **Track: Implement User Registration and Authentication Flow**
+- [x] **Track: Implement User Registration and Authentication Flow**
   *Link: [./tracks/auth_flow_20260205/](./tracks/auth_flow_20260205/)*
