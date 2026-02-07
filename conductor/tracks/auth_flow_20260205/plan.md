@@ -17,6 +17,6 @@
     - [x] Create a "Profile" controller or action
     - [x] Implement token verification middleware/concern
     - [x] Verify access control
-- [ ] Task: Write Authentication and Profile Integration Tests
-    - [ ] Test login flow followed by protected resource access
+- [x] Task: Write Authentication and Profile Integration Tests [1491de1]
+    - [x] Test login flow followed by protected resource access
 - [ ] Task: Conductor - User Manual Verification 'Refine Authentication and Secure Profile' (Protocol in workflow.md)
