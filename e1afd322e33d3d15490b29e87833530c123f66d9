@@ -1,0 +1,8 @@
+Task: Implement Authenticated Profile Endpoint
+Summary: Implemented the /profile endpoint which returns the current authenticated user's data. Refined ApplicationController to return 401 Unauthorized for invalid tokens and to set @current_user.
+Changes:
+- Created app/controllers/profile_controller.rb
+- Created test/controllers/profile_controller_test.rb
+- Updated app/controllers/application_controller.rb
+- Updated config/routes.rb
+Why: To provide a demonstration of a protected resource that requires a valid JWT for access.
