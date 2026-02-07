@@ -1,0 +1,5 @@
+Task: Write Authentication and Profile Integration Tests
+Summary: Added a full integration test covering user registration, login, and accessing the protected profile endpoint.
+Changes:
+- Created test/integration/auth_flow_test.rb
+Why: To verify that all components of the authentication flow work together correctly in a realistic user scenario.
