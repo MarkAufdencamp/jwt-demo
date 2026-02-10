@@ -17,3 +17,4 @@ This is a Ruby on Rails API application designed to demonstrate JSON Web Token (
 - **User Authentication:** Secure login (`POST /authenticate`) that verifies credentials and issues a JWT.
 - **Password Management:** Secure password hashing using `bcrypt` and support for password reset flows.
 - **Protected Resources:** Demonstration of securing API endpoints (e.g., Profile/Dashboard) requiring a valid Bearer token.
+- **Domains API:** RESTful CRUD operations for managing user-owned domain names (`GET/POST/PATCH/DELETE /domains`).
