@@ -17,8 +17,8 @@
     - [x] Implement `index`, `show`, `create`, `update`, and `destroy` actions
     - [x] Scope all actions to `@current_user.domains`
     - [x] Update `config/routes.rb`
-- [ ] Task: Write Controller Integration Tests
-    - [ ] Create `test/controllers/domains_controller_test.rb`
-    - [ ] Test success and failure cases for all CRUD operations
-    - [ ] Test cross-user authorization (ensure users can't access others' domains)
+- [x] Task: Write Controller Integration Tests [39267f9]
+    - [x] Create `test/controllers/domains_controller_test.rb`
+    - [x] Test success and failure cases for all CRUD operations
+    - [x] Test cross-user authorization (ensure users can't access others' domains)
 - [ ] Task: Conductor - User Manual Verification 'CRUD API Implementation' (Protocol in workflow.md)
