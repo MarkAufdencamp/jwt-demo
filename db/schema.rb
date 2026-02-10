@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_02_06_213259) do
+ActiveRecord::Schema[8.0].define(version: 2026_02_10_190951) do
+  create_table "domains", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "domain"
+    t.string "tld"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["domain", "tld"], name: "index_domains_on_domain_and_tld", unique: true
+    t.index ["user_id"], name: "index_domains_on_user_id"
+  end
+
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
@@ -19,4 +29,6 @@ ActiveRecord::Schema[8.0].define(version: 2026_02_06_213259) do
     t.string "email"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
+
+  add_foreign_key "domains", "users"
 end

@@ -1,0 +1,9 @@
+one:
+  domain: example
+  tld: com
+  user: one
+
+two:
+  domain: google
+  tld: com
+  user: two
