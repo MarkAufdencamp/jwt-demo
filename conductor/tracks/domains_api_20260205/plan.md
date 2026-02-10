@@ -6,9 +6,9 @@
     - [x] Run migration
     - [x] Define `Domain` model with validations for presence and unique combination of domain/tld
     - [x] Establish `belongs_to :user` relationship
-- [ ] Task: Write Model Tests
-    - [ ] Create `test/models/domain_test.rb`
-    - [ ] Verify validations and associations
+- [x] Task: Write Model Tests [e2a596f]
+    - [x] Create `test/models/domain_test.rb`
+    - [x] Verify validations and associations
 - [ ] Task: Conductor - User Manual Verification 'Foundation & Data Model' (Protocol in workflow.md)
 
 ## Phase 2: CRUD API Implementation
