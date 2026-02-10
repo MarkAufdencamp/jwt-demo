@@ -11,7 +11,7 @@
     - [x] Verify validations and associations
 - [x] Task: Conductor - User Manual Verification 'Foundation & Data Model' (Protocol in workflow.md)
 
-## Phase 2: CRUD API Implementation
+## Phase 2: CRUD API Implementation [checkpoint: a02ccc6]
 - [x] Task: Implement DomainsController [39267f9]
     - [x] Generate `app/controllers/domains_controller.rb`
     - [x] Implement `index`, `show`, `create`, `update`, and `destroy` actions
@@ -21,4 +21,4 @@
     - [x] Create `test/controllers/domains_controller_test.rb`
     - [x] Test success and failure cases for all CRUD operations
     - [x] Test cross-user authorization (ensure users can't access others' domains)
-- [ ] Task: Conductor - User Manual Verification 'CRUD API Implementation' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'CRUD API Implementation' (Protocol in workflow.md)
