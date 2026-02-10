@@ -12,11 +12,11 @@
 - [x] Task: Conductor - User Manual Verification 'Foundation & Data Model' (Protocol in workflow.md)
 
 ## Phase 2: CRUD API Implementation
-- [ ] Task: Implement DomainsController
-    - [ ] Generate `app/controllers/domains_controller.rb`
-    - [ ] Implement `index`, `show`, `create`, `update`, and `destroy` actions
-    - [ ] Scope all actions to `@current_user.domains`
-    - [ ] Update `config/routes.rb`
+- [x] Task: Implement DomainsController [39267f9]
+    - [x] Generate `app/controllers/domains_controller.rb`
+    - [x] Implement `index`, `show`, `create`, `update`, and `destroy` actions
+    - [x] Scope all actions to `@current_user.domains`
+    - [x] Update `config/routes.rb`
 - [ ] Task: Write Controller Integration Tests
     - [ ] Create `test/controllers/domains_controller_test.rb`
     - [ ] Test success and failure cases for all CRUD operations
