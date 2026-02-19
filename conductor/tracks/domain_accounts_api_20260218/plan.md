@@ -9,7 +9,7 @@ Implement the `Account` model with validations, security features, and its relat
     - [ ] Generate migration: `rails generate model Account domain:references username:string email:string password_digest:string`
     - [ ] Update migration to add unique index on `[:domain_id, :username]`
     - [ ] Run migration: `bin/rails db:migrate`
-- [ ] Task: Implement `Account` model logic (TDD)
+- [~] Task: Implement `Account` model logic (TDD)
     - [ ] Write failing unit tests for `Account` (validations: presence of username/email, uniqueness of username scoped to domain; `has_secure_password`)
     - [ ] Implement `has_secure_password` in `app/models/account.rb`
     - [ ] Add validations to `app/models/account.rb`
