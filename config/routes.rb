@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   post 'authenticate', to: 'authentication#authenticate'
   post 'users', to: 'users#create'
   get 'profile', to: 'profile#show'
-  resources :domains
+  resources :domains do
+    resources :accounts
+  end
 
   # Defines the root path route ("/")
   # root "posts#index"
