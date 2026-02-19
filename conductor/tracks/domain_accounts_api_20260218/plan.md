@@ -18,7 +18,7 @@ Implement the `Account` model with validations, security features, and its relat
     - [ ] Write failing unit test in `domain_test.rb` for `has_many :accounts` and dependent destruction
     - [ ] Add `has_many :accounts, dependent: :destroy` to `app/models/domain.rb`
     - [ ] Verify tests pass
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Data Model and Associations' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Phase 1: Data Model and Associations' (Protocol in workflow.md)
 
 ## Phase 2: API Controller and Routing
 Implement the nested RESTful API for managing accounts within a domain.
