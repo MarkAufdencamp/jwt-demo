@@ -37,7 +37,7 @@ Implement the nested RESTful API for managing accounts within a domain.
     - [ ] Write failing tests to ensure a user cannot access/modify accounts of a domain they don't own
     - [ ] Implement `set_domain` before_action in `AccountsController` that finds the domain via `current_user.domains.find(params[:domain_id])`
     - [ ] Verify security tests pass
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: API Controller and Routing' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Phase 2: API Controller and Routing' (Protocol in workflow.md)
 
 ## Phase 3: Final Verification and Cleanup
 - [ ] Task: Documentation and Style
