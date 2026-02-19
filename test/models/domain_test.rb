@@ -25,54 +25,20 @@ class DomainTest < ActiveSupport::TestCase
     assert_not duplicate_domain.valid?
   end
 
-    test "should belong to user" do
-
-      assert_respond_to @domain, :user
-
-      assert_instance_of User, @domain.user
-
-    end
-
-  
-
-    test "should have many accounts" do
-
-      assert_respond_to @domain, :accounts
-
-    end
-
-  
-
-      test "should destroy associated accounts on destruction" do
-
-  
-
-        new_domain = User.first.domains.create!(domain: "temporary", tld: "com")
-
-  
-
-        new_domain.accounts.create!(username: "test", email: "test@example.com", password: "password", password_confirmation: "password")
-
-  
-
-        assert_difference "Account.count", -1 do
-
-  
-
-          new_domain.destroy
-
-  
-
-        end
-
-  
-
-      end
-
-  
-
-    
-
+  test "should belong to user" do
+    assert_respond_to @domain, :user
+    assert_instance_of User, @domain.user
   end
 
-  
+  test "should have many accounts" do
+    assert_respond_to @domain, :accounts
+  end
+
+  test "should destroy associated accounts on destruction" do
+    new_domain = User.first.domains.create!(domain: "temporary", tld: "com")
+    new_domain.accounts.create!(username: "test", email: "test@example.com", password: "password", password_confirmation: "password")
+    assert_difference "Account.count", -1 do
+      new_domain.destroy
+    end
+  end
+end

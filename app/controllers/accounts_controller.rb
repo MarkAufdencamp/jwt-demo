@@ -39,12 +39,17 @@ class AccountsController < ApplicationController
 
   private
 
+  # Secure lookup pattern:
+  # We find the domain through @current_user.domains to ensure the authenticated user
+  # actually owns the domain they are trying to manage accounts for.
+  # This prevents "Insecure Direct Object Reference" (IDOR) vulnerabilities.
   def set_domain
     @domain = @current_user.domains.find(params[:domain_id])
   rescue ActiveRecord::RecordNotFound
     render json: { error: "Domain not found" }, status: :not_found
   end
 
+  # Once the domain is verified, we find the account within that domain's scope.
   def set_account
     @account = @domain.accounts.find(params[:id])
   rescue ActiveRecord::RecordNotFound
