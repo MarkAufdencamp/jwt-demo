@@ -33,7 +33,7 @@ Implement the nested RESTful API for managing accounts within a domain.
     - [ ] Implement `update` action: Update account details
     - [ ] Implement `destroy` action: Delete account
     - [ ] Verify all controller tests pass
-- [ ] Task: Implement Ownership Security (TDD)
+- [x] Task: Implement Ownership Security (TDD) 7888588
     - [ ] Write failing tests to ensure a user cannot access/modify accounts of a domain they don't own
     - [ ] Implement `set_domain` before_action in `AccountsController` that finds the domain via `current_user.domains.find(params[:domain_id])`
     - [ ] Verify security tests pass
