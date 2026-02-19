@@ -23,7 +23,7 @@ Implement the `Account` model with validations, security features, and its relat
 ## Phase 2: API Controller and Routing
 Implement the nested RESTful API for managing accounts within a domain.
 
-- [ ] Task: Configure Routes
+- [x] Task: Configure Routes ce95aa2
     - [ ] Update `config/routes.rb` to nest `resources :accounts` within `resources :domains`
 - [ ] Task: Implement `AccountsController` (TDD)
     - [ ] Create `test/controllers/accounts_controller_test.rb` with failing tests for CRUD actions
