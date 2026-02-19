@@ -47,4 +47,18 @@ class AccountsControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :no_content
   end
+
+  test "should not access other user's domain accounts" do
+    other_user = users(:two)
+    other_domain = domains(:two)
+    get domain_accounts_url(other_domain), headers: @headers, as: :json
+    assert_response :not_found
+  end
+
+  test "should not access other user's account" do
+    other_domain = domains(:two)
+    other_account = accounts(:two)
+    get domain_account_url(other_domain, other_account), headers: @headers, as: :json
+    assert_response :not_found
+  end
 end
