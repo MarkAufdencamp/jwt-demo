@@ -1,7 +1,7 @@
 # Project Context: JWT Demo
 
 ## Project Overview
-This is a Ruby on Rails API application designed to demonstrate JSON Web Token (JWT) authentication. It provides endpoints for user authentication and token generation, utilizing a custom JWT implementation alongside Rails' built-in secure password features.
+This is a Ruby on Rails API application designed to demonstrate JSON Web Token (JWT) authentication. It provides endpoints for user authentication (login/registration), profile management, and domain resource management, utilizing a custom JWT implementation alongside Rails' built-in secure password features.
 
 ## Tech Stack
 *   **Framework:** Ruby on Rails 8.0.4
@@ -15,14 +15,22 @@ This is a Ruby on Rails API application designed to demonstrate JSON Web Token (
 
 ## Key Components
 
-### Authentication
+### Authentication & Users
 *   **`app/lib/json_web_token.rb`**: A utility class responsible for encoding and decoding JWTs. It uses the Rails `secret_key_base` for signing.
-*   **`app/controllers/authentication_controller.rb`**: Handles the `/authenticate` endpoint. It verifies user credentials and issues a JWT if successful.
-*   **`app/models/user.rb`**: The User model, equipped with `has_secure_password` for safe password storage.
+*   **`app/controllers/authentication_controller.rb`**: Handles the `/authenticate` endpoint (login).
+*   **`app/controllers/users_controller.rb`**: Handles user registration (`POST /users`).
+*   **`app/controllers/profile_controller.rb`**: Handles retrieving the authenticated user's profile (`GET /profile`).
+*   **`app/models/user.rb`**: The User model with `has_secure_password`. Validates `username` and `email`. Has many `domains`.
+
+### Domains Resource
+*   **`app/controllers/domains_controller.rb`**: Standard CRUD controller for managing domains associated with the current user.
+*   **`app/models/domain.rb`**: Represents a domain (`domain`, `tld`) belonging to a user. Validates presence and uniqueness of domain+tld pair.
 
 ### Routes (`config/routes.rb`)
-*   `POST /authenticate` -> `AuthenticationController#authenticate`: Accepts `username` and `password`, returns a JWT token.
-*   `POST /users` -> `UsersController#create`: Intended for user registration. **Note:** `UsersController` appears to be missing from the current codebase.
+*   `POST /authenticate` -> `AuthenticationController#authenticate`
+*   `POST /users` -> `UsersController#create`
+*   `GET /profile` -> `ProfileController#show`
+*   `resources :domains`: Full CRUD for domains (`index`, `show`, `create`, `update`, `destroy`).
 *   `GET /up`: Health check endpoint.
 
 ## Development Setup
@@ -62,4 +70,4 @@ The project includes a `Dockerfile` and `.kamal` configuration for containerized
 
 ## Conventions
 *   **API-Only:** The application is structured primarily as an API.
-*   **Solid Stack:** Uses the "Solid" family of gems for database-backed caching, queuing, and websockets, reducing the need for external services like Redis in simple setups.
+*   **Solid Stack:** Uses the "Solid" family of gems for database-backed caching, queuing, and websockets.
