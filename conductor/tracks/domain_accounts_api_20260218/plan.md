@@ -40,7 +40,7 @@ Implement the nested RESTful API for managing accounts within a domain.
 - [x] Task: Conductor - User Manual Verification 'Phase 2: API Controller and Routing' (Protocol in workflow.md) 0f50a55
 
 ## Phase 3: Final Verification and Cleanup
-- [ ] Task: Documentation and Style
+- [~] Task: Documentation and Style
     - [ ] Ensure all new methods are documented
     - [ ] Run RuboCop and fix any linting issues: `bin/rubocop`
 - [ ] Task: Final Coverage Check
