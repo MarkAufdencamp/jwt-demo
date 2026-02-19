@@ -5,7 +5,7 @@ This plan outlines the steps to implement the `Account` model and its correspond
 ## Phase 1: Data Model and Associations
 Implement the `Account` model with validations, security features, and its relationship to the `Domain` model.
 
-- [~] Task: Create `Account` migration and model
+- [x] Task: Create `Account` migration and model 01a5014
     - [ ] Generate migration: `rails generate model Account domain:references username:string email:string password_digest:string`
     - [ ] Update migration to add unique index on `[:domain_id, :username]`
     - [ ] Run migration: `bin/rails db:migrate`
