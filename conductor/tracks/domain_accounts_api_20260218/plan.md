@@ -25,7 +25,7 @@ Implement the nested RESTful API for managing accounts within a domain.
 
 - [x] Task: Configure Routes ce95aa2
     - [ ] Update `config/routes.rb` to nest `resources :accounts` within `resources :domains`
-- [~] Task: Implement `AccountsController` (TDD)
+- [x] Task: Implement `AccountsController` (TDD) db4e1ac
     - [ ] Create `test/controllers/accounts_controller_test.rb` with failing tests for CRUD actions
     - [ ] Implement `index` action: List accounts for the specified domain
     - [ ] Implement `show` action: Show details of a specific account
