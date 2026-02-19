@@ -43,6 +43,6 @@ Implement the nested RESTful API for managing accounts within a domain.
 - [x] Task: Documentation and Style a08f8f9
     - [ ] Ensure all new methods are documented
     - [ ] Run RuboCop and fix any linting issues: `bin/rubocop`
-- [ ] Task: Final Coverage Check
+- [~] Task: Final Coverage Check
     - [ ] Run full test suite and verify coverage > 80% for new code
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Final Verification and Cleanup' (Protocol in workflow.md)
