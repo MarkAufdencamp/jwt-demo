@@ -20,24 +20,24 @@ Implement the `Account` model with validations, security features, and its relat
     - [x] Verify tests pass
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Data Model and Associations' (Protocol in workflow.md) e0259c7
 
-## Phase 2: API Controller and Routing
+## Phase 2: API Controller and Routing [checkpoint: 0f50a55]
 Implement the nested RESTful API for managing accounts within a domain.
 
 - [x] Task: Configure Routes ce95aa2
-    - [ ] Update `config/routes.rb` to nest `resources :accounts` within `resources :domains`
+    - [x] Update `config/routes.rb` to nest `resources :accounts` within `resources :domains`
 - [x] Task: Implement `AccountsController` (TDD) db4e1ac
-    - [ ] Create `test/controllers/accounts_controller_test.rb` with failing tests for CRUD actions
-    - [ ] Implement `index` action: List accounts for the specified domain
-    - [ ] Implement `show` action: Show details of a specific account
-    - [ ] Implement `create` action: Create account associated with the domain
-    - [ ] Implement `update` action: Update account details
-    - [ ] Implement `destroy` action: Delete account
-    - [ ] Verify all controller tests pass
+    - [x] Create `test/controllers/accounts_controller_test.rb` with failing tests for CRUD actions
+    - [x] Implement `index` action: List accounts for the specified domain
+    - [x] Implement `show` action: Show details of a specific account
+    - [x] Implement `create` action: Create account associated with the domain
+    - [x] Implement `update` action: Update account details
+    - [x] Implement `destroy` action: Delete account
+    - [x] Verify all controller tests pass
 - [x] Task: Implement Ownership Security (TDD) 7888588
-    - [ ] Write failing tests to ensure a user cannot access/modify accounts of a domain they don't own
-    - [ ] Implement `set_domain` before_action in `AccountsController` that finds the domain via `current_user.domains.find(params[:domain_id])`
-    - [ ] Verify security tests pass
-- [~] Task: Conductor - User Manual Verification 'Phase 2: API Controller and Routing' (Protocol in workflow.md)
+    - [x] Write failing tests to ensure a user cannot access/modify accounts of a domain they don't own
+    - [x] Implement `set_domain` before_action in `AccountsController` that finds the domain via `current_user.domains.find(params[:domain_id])`
+    - [x] Verify security tests pass
+- [x] Task: Conductor - User Manual Verification 'Phase 2: API Controller and Routing' (Protocol in workflow.md) 0f50a55
 
 ## Phase 3: Final Verification and Cleanup
 - [ ] Task: Documentation and Style
