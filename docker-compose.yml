@@ -1,0 +1,33 @@
+services:
+  db:
+    image: mysql:8.0.45-debian
+    hostname: db
+    domainname: local
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+    command: mysqld
+    volumes:
+      - mysql-data:/var/lib/mysql
+  web:
+    build: .
+    hostname: web
+    domainname: local
+    environment:
+      - MYSQL_HOST_NAME=${MYSQL_HOST_NAME}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+    volumes:
+      - ./log:/rails/log
+      - ./storage:/rails/storage
+    ports:
+      - "3000:3000"
+    secrets:
+      - source: master_key
+        target: /rails/config/master.key
+volumes:
+  mysql-data:
+secrets:
+  master_key:
+    file: ./config/master.key
