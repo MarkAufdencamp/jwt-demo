@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: joined
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: jwt_demo_development
+  username: root
+  password: joined
+  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,6 +27,9 @@ development:
 test:
   <<: *default
   database: jwt_demo_test
+  username: root
+  password: joined
+  socket: /var/run/mysqld/mysqld.sock
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -52,8 +55,10 @@ production:
   primary: &primary_production
     <<: *default
     database: jwt_demo_production
-    username: jwt_demo
-    password: <%= ENV["JWT_DEMO_DATABASE_PASSWORD"] %>
+    username: <%= ENV["MYSQL_USER"] %>
+    password: <%= ENV["MYSQL_PASSWORD"] %>
+    host: <%= ENV["MYSQL_HOST_NAME"] %>
+    port: 3306
   cache:
     <<: *primary_production
     database: jwt_demo_production_cache
