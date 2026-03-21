@@ -10,7 +10,7 @@ image: markaufdencamp/jwt-demo
 servers:
   web:
 #   - 192.168.0.1
-    - app-srvr-00.iluviya.net
+    - app-srvr-01.iluviya.net
 
   # job:
   #   hosts:
@@ -46,6 +46,7 @@ env:
     - MYSQL_PASSWORD
     # Run the Solid Queue Supervisor inside the web server's Puma process to do jobs.
     # When you start using multiple servers, you should split out job processing to a dedicated machine.
+  clear:
     SOLID_QUEUE_IN_PUMA: true
 
     # Set number of processes dedicated to Solid Queue (default: 1)
@@ -84,7 +85,7 @@ asset_path: false
 
 # Configure the image builder.
 builder:
-  arch: amd64
+  arch: arm64
 
   # # Build image via remote server (useful for faster amd64 builds on arm64 computers)
   # remote: ssh://docker@docker-builder-server
@@ -120,14 +121,14 @@ builder:
 accessories:
   db:
     image: mysql:8.0
-    host: app-srvr-00.iluviya.net
+    host: app-srvr-01.iluviya.net
     # Change to 3306 to expose port to the world instead of just local network.
     port: "127.0.0.1:3306:3306"
     env:
       clear:
         MYSQL_ROOT_HOST: '%'
       secret:
-        - MYSQL_PASSWORD
+        - MYSQL_ROOT_PASSWORD
     files:
       - config/mysql/production.cnf:/etc/mysql/my.cnf
       - db/production.sql:/docker-entrypoint-initdb.d/setup.sql
@@ -140,3 +141,6 @@ accessories:
 #     port: 6379
 #     directories:
 #       - data:/data
+
+ssh:
+  user: hostmaster
