@@ -1,9 +1,9 @@
 # Implementation Plan: Feature Landing Page
 
 ## Phase 1: Setup and Configuration
-- [ ] Task: Update Tech Stack Documentation
+- [x] Task: Update Tech Stack Documentation 19f084e
     - [ ] Update `conductor/tech-stack.md` to indicate the addition of ActionView to the API-only app.
-- [ ] Task: Enable ActionView
+- [~] Task: Enable ActionView
     - [ ] Verify `config/application.rb` for required middleware and Railtie configurations necessary for view rendering.
     - [ ] If missing, add `require "action_view/railtie"` and ensure `config.api_only = false` or similar setup if needed.
 - [ ] Task: Setup Base Layout
