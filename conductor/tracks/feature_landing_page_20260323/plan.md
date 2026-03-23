@@ -11,13 +11,13 @@
 - [x] Task: Conductor - User Manual Verification 'Setup and Configuration' (Protocol in workflow.md) 4701bd6
 
 ## Phase 2: Landing Page Controller
-- [~] Task: Create HomeController
+- [x] Task: Create HomeController 405138b
     - [ ] Write failing controller test `test/controllers/home_controller_test.rb` asserting `GET /` returns success.
     - [ ] Create `app/controllers/home_controller.rb` inheriting from `ApplicationController`.
     - [ ] Add `index` action to `HomeController`.
     - [ ] Add route `root to: "home#index"` in `config/routes.rb`.
     - [ ] Ensure tests pass.
-- [ ] Task: Conductor - User Manual Verification 'Landing Page Controller' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Landing Page Controller' (Protocol in workflow.md)
 
 ## Phase 3: Landing Page Views
 - [ ] Task: Create Landing Page View
