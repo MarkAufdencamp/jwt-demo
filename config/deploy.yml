@@ -119,6 +119,9 @@ builder:
 #     directories:
 #       - data:/var/lib/mysql
 accessories:
+  # This accessory name will become part of the container host name for database access
+  # jwt-demo-db
+  # The docker-compose local container name should match the database.yml host setting
   db:
     image: mysql:8.0
     host: app-srvr-01.iluviya.net

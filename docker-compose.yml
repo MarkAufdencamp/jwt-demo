@@ -1,17 +1,21 @@
 services:
   db:
     image: mysql:8.0.45-debian
-    hostname: db
+    # This matches the kamal accessory name 'db' which kamal concatenates with the service name
+    # service - jwt-demo
+    # accessory host name - db
+    # jwt-demo-db matches the kamal deploy naming for the database.yml host name
+    hostname: jwt-demo-db
     domainname: local
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     command: mysqld
     volumes:
       - mysql-data:/var/lib/mysql
   web:
     build: .
-    hostname: web
+    hostname: jwt-demo
     domainname: local
     environment:
       - MYSQL_HOST_NAME=${MYSQL_HOST_NAME}
