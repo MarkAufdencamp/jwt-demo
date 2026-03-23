@@ -2,7 +2,7 @@
 
 ## Backend
 - **Language:** Ruby (specified in `.ruby-version`)
-- **Framework:** Ruby on Rails 8.0.4 (API mode)
+- **Framework:** Ruby on Rails 8.0.4 (API mode, with ActionView enabled for landing page rendering)
 - **Authentication:**
   - `jwt` gem for token encoding and decoding.
   - `bcrypt` for secure password hashing via `has_secure_password`.
