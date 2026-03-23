@@ -10,17 +10,17 @@
     - [ ] Create `app/views/layouts/application.html.erb` with a basic HTML5 boilerplate.
 - [x] Task: Conductor - User Manual Verification 'Setup and Configuration' (Protocol in workflow.md) 4701bd6
 
-## Phase 2: Landing Page Controller
+## Phase 2: Landing Page Controller [checkpoint: e50a00c]
 - [x] Task: Create HomeController 405138b
     - [ ] Write failing controller test `test/controllers/home_controller_test.rb` asserting `GET /` returns success.
     - [ ] Create `app/controllers/home_controller.rb` inheriting from `ApplicationController`.
     - [ ] Add `index` action to `HomeController`.
     - [ ] Add route `root to: "home#index"` in `config/routes.rb`.
     - [ ] Ensure tests pass.
-- [~] Task: Conductor - User Manual Verification 'Landing Page Controller' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Landing Page Controller' (Protocol in workflow.md) e50a00c
 
 ## Phase 3: Landing Page Views
-- [ ] Task: Create Landing Page View
+- [~] Task: Create Landing Page View
     - [ ] Create `app/views/home/index.html.erb`.
     - [ ] Add "Product Overview" section with a brief API description.
     - [ ] Add "API Docs Link" section with placeholder links to documentation.
