@@ -20,9 +20,9 @@
 - [x] Task: Conductor - User Manual Verification 'Landing Page Controller' (Protocol in workflow.md) e50a00c
 
 ## Phase 3: Landing Page Views
-- [~] Task: Create Landing Page View
+- [x] Task: Create Landing Page View c2a111c
     - [ ] Create `app/views/home/index.html.erb`.
     - [ ] Add "Product Overview" section with a brief API description.
     - [ ] Add "API Docs Link" section with placeholder links to documentation.
     - [ ] Add "Auth CTAs" section with links to sign up and log in routes.
-- [ ] Task: Conductor - User Manual Verification 'Landing Page Views' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Landing Page Views' (Protocol in workflow.md)
