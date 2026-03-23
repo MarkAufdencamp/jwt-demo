@@ -3,10 +3,10 @@
 ## Phase 1: Setup and Configuration
 - [x] Task: Update Tech Stack Documentation 19f084e
     - [ ] Update `conductor/tech-stack.md` to indicate the addition of ActionView to the API-only app.
-- [~] Task: Enable ActionView
+- [x] Task: Enable ActionView 5794000
     - [ ] Verify `config/application.rb` for required middleware and Railtie configurations necessary for view rendering.
     - [ ] If missing, add `require "action_view/railtie"` and ensure `config.api_only = false` or similar setup if needed.
-- [ ] Task: Setup Base Layout
+- [~] Task: Setup Base Layout
     - [ ] Create `app/views/layouts/application.html.erb` with a basic HTML5 boilerplate.
 - [ ] Task: Conductor - User Manual Verification 'Setup and Configuration' (Protocol in workflow.md)
 
