@@ -19,3 +19,4 @@ This is a Ruby on Rails API application designed to demonstrate JSON Web Token (
 - **Protected Resources:** Demonstration of securing API endpoints (e.g., Profile/Dashboard) requiring a valid Bearer token.
 - **Domains API:** RESTful CRUD operations for managing user-owned domain names (`GET/POST/PATCH/DELETE /domains`).
 - **Domain Accounts API:** Nested RESTful CRUD operations for managing accounts (identities) within a domain, including password security.
+- **Landing Page:** A visual HTML entry point providing a product overview, API documentation links, and authentication CTAs.
