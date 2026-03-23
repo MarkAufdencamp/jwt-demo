@@ -1,6 +1,6 @@
 # Implementation Plan: Feature Landing Page
 
-## Phase 1: Setup and Configuration
+## Phase 1: Setup and Configuration [checkpoint: 4701bd6]
 - [x] Task: Update Tech Stack Documentation 19f084e
     - [ ] Update `conductor/tech-stack.md` to indicate the addition of ActionView to the API-only app.
 - [x] Task: Enable ActionView 5794000
@@ -8,10 +8,10 @@
     - [ ] If missing, add `require "action_view/railtie"` and ensure `config.api_only = false` or similar setup if needed.
 - [x] Task: Setup Base Layout a27cb2c
     - [ ] Create `app/views/layouts/application.html.erb` with a basic HTML5 boilerplate.
-- [~] Task: Conductor - User Manual Verification 'Setup and Configuration' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Setup and Configuration' (Protocol in workflow.md) 4701bd6
 
 ## Phase 2: Landing Page Controller
-- [ ] Task: Create HomeController
+- [~] Task: Create HomeController
     - [ ] Write failing controller test `test/controllers/home_controller_test.rb` asserting `GET /` returns success.
     - [ ] Create `app/controllers/home_controller.rb` inheriting from `ApplicationController`.
     - [ ] Add `index` action to `HomeController`.
